@@ -16,7 +16,7 @@
  font-family: Poppins;
 }
 body{
- background: #F3F3F3;
+ background: var(--container-bg-color);
 }
 
 h1 {
@@ -39,12 +39,12 @@ i{
 
 button.button {
  background: #FFFFFF;
- border: 1px solid #D0D0D0
+ border: 1px solid var(--border-color);
 }
 
 button.button.login-btn {
- background: #7AFF5E;
- border: 1px solid #D0D0D0;
+ /* background: #7AFF5E; */
+ border: 1px solid var(--border-color);
  color: #000000;
  display: flex;
  align-items: center;justify-content: space-between;
@@ -57,11 +57,11 @@ button.button.login-btn i{
 button.icon-btn{
   display: flex;
  align-items: center;
- justify-content: center
+ justify-content: center;
 }
 
 button.icon-btn:hover{
- outline: 1px solid #D0D0D0;
+ outline: 1px solid var(--border-color);
 }
 
 input {
@@ -79,6 +79,8 @@ body>header {
  position: sticky;
  left: 0;
  top: 0;
+ background: var(--container-bg-color);
+ box-shadow: var(--header-bottom-shadow)
 }
 
 /*body > header > nav >  ul{
@@ -108,7 +110,7 @@ body>header>div.searhbar_profile-pic_login-button_cover>div {
 
 
 body>header>div.searhbar_profile-pic_login-button_cover>.searchbar input {
- border: 1px solid #000;
+ border: 1px solid var(--border-color);
  padding: 8px;
  height: 28px;
  border-radius: 4px;
@@ -119,8 +121,27 @@ body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic>img {
  width: 30px;
  height: 30px;
  border-radius: 50%;
- border: 1.8px solid #000
+ border: 1.8px solid #000;
+ position: relative;
 }
+
+body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic{
+ position: relative;
+}
+
+body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic i{
+ position: absolute;
+ bottom: 4px;
+ right: -9px;
+}
+/* body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic>img::after{
+ content: '\9660';
+ position: absolute;
+ bottom: 2px;
+ right: 0;
+ width: 2px;
+ height: 2px;
+} */
 
 
 

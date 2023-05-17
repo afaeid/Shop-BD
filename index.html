@@ -8,9 +8,10 @@
  <title>SHOPBD</title>
  <!-- Importing font awesome icons -->
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+  <link rel="stylesheet" href="assests/css/main.css">
 
- <link rel="stylesheet" href="assests/css/main.css">
- <link rel="stylesheet" href="assests/css/colors.css">
+ <link rel="stylesheet" href="assests/css/colors-and-designs.css">
 </head>
 
 <body>
@@ -34,6 +35,7 @@
 
    <div class="profile-pic">
     <img src="assests/images/profiles/user1.png" alt="" />
+    <i class="fa-solid fa-caret-down"></i>
    </div>
 
    <div class="login-button">
@@ -48,10 +50,10 @@
   </div>
 
  </header>
- <main>
 
- </main>
-
+<main>
+ 
+</main>
  <footer>
 
  </footer>
@@ -59,7 +61,23 @@
 
 
 
+
+
+
+<script>
+ var menu = document.querySelector("body>header>.menu-button-cover");
+ var profilePic = document.querySelector("body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic");
+ 
+ //window.addEventListener("load", ()=>{
+  if(localStorage.getItem("loginStatus") == null){
+  // menu.style.display = "none";
+   profilePic.style.display = "none"
+  }
+ //})
+</script>
  <script src="assests/js/main.js"></script>
+ 
+
 </body>
 
 </html>
