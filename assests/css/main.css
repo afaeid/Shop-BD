@@ -1,6 +1,7 @@
 @font-face {
- font-family: Poppins;
  src: url("../fonts/poppins/Poppins-Regular.ttf");
+ font-family: Poppins;
+ /* /assests/fonts/poppins/Poppins-Regular.ttf */
 }
 
 /* Reset Code*/
@@ -12,30 +13,117 @@
  list-style-type: none;
  border: none;
  outline: none;
+ font-family: Poppins;
+}
+body{
+ background: #F3F3F3;
 }
 
-h1{
+h1 {
  font-size: 25px;
 }
 
-a{
+a {
  color: #000;
 }
 
-body > header{
+button {
+ background: none;
+ padding: 5px 8px;
+ border-radius: 8px;
+}
+
+i{
+ display: inline-block;
+}
+
+button.button {
+ background: #FFFFFF;
+ border: 1px solid #D0D0D0
+}
+
+button.button.login-btn {
+ background: #7AFF5E;
+ border: 1px solid #D0D0D0;
+ color: #000000;
+ display: flex;
+ align-items: center;justify-content: space-between;
+}
+
+button.button.login-btn i{
+ margin: 0 5px;
+}
+
+button.icon-btn{
+  display: flex;
+ align-items: center;
+ justify-content: center
+}
+
+button.icon-btn:hover{
+ outline: 1px solid #D0D0D0;
+}
+
+input {
+ background: none;
+}
+
+body>header {
  width: 100%;
  min-height: 50px;
  padding: 20px;
- background: #D7D7D7;
- display: flex;align-items: center;justify-content: space-between;
- 
+ /* background: #D7D7D7; */
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ position: sticky;
+ left: 0;
+ top: 0;
 }
 
 /*body > header > nav >  ul{
  display: flex;align-items: center;justify-content: space-between;flex-direction: column
 }*/
 
-body > header > nav > ul > li{
+body>header>nav>ul>li {
  display: inline;
  margin: 0px 10px;
+}
+
+/* body > header > nav > ul > li > a{
+ text-transform: uppercase
+} */
+
+body>header>div.searhbar_profile-pic_login-button_cover {
+ width: 30%;
+ display: flex;
+ align-items: center;
+ justify-content: space-around
+}
+
+body>header>div.searhbar_profile-pic_login-button_cover>div {
+ margin: 0 8px;
+}
+
+
+
+body>header>div.searhbar_profile-pic_login-button_cover>.searchbar input {
+ border: 1px solid #000;
+ padding: 8px;
+ height: 28px;
+ border-radius: 4px;
+ font-size: 12px
+}
+
+body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic>img {
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+ border: 1.8px solid #000
+}
+
+
+
+body>header>.menu-button-cover>button>i {
+ font-size: 18px
 }
