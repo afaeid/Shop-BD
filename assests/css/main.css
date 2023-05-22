@@ -1,7 +1,6 @@
 @font-face {
  src: url("../fonts/poppins/Poppins-Regular.ttf");
  font-family: Poppins;
- /* /assests/fonts/poppins/Poppins-Regular.ttf */
 }
 
 /* Reset Code*/
@@ -15,8 +14,10 @@
  outline: none;
  font-family: Poppins;
 }
-body{
- background: var(--container-bg-color);
+
+body {
+ background: var(--container-bg-color);position: relative;
+ min-height: 100vh;
 }
 
 h1 {
@@ -24,44 +25,46 @@ h1 {
 }
 
 a {
- color: #000;
+ color: var(--black-color);
 }
 
 button {
  background: none;
  padding: 5px 8px;
  border-radius: 8px;
+ cursor: pointer;
 }
 
-i{
+i {
  display: inline-block;
 }
 
 button.button {
- background: #FFFFFF;
+ background: var(--white-color);
  border: 1px solid var(--border-color);
 }
 
 button.button.login-btn {
- /* background: #7AFF5E; */
  border: 1px solid var(--border-color);
- color: #000000;
+ color: var(--black-color);
  display: flex;
- align-items: center;justify-content: space-between;
+ align-items: center;
+ justify-content: space-between;
 }
 
-button.button.login-btn i{
+button.button.login-btn i {
  margin: 0 5px;
 }
 
-button.icon-btn{
-  display: flex;
+button.icon-btn {
+ display: flex;
  align-items: center;
  justify-content: center;
 }
 
-button.icon-btn:hover{
+button.icon-btn:hover {
  outline: 1px solid var(--border-color);
+ background: var(--white-color);
 }
 
 input {
@@ -71,8 +74,7 @@ input {
 body>header {
  width: 100%;
  min-height: 50px;
- padding: 20px;
- /* background: #D7D7D7; */
+ padding: 18px 25px;
  display: flex;
  align-items: center;
  justify-content: space-between;
@@ -83,18 +85,11 @@ body>header {
  box-shadow: var(--header-bottom-shadow)
 }
 
-/*body > header > nav >  ul{
- display: flex;align-items: center;justify-content: space-between;flex-direction: column
-}*/
 
 body>header>nav>ul>li {
  display: inline;
  margin: 0px 10px;
 }
-
-/* body > header > nav > ul > li > a{
- text-transform: uppercase
-} */
 
 body>header>div.searhbar_profile-pic_login-button_cover {
  width: 30%;
@@ -121,30 +116,70 @@ body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic>img {
  width: 30px;
  height: 30px;
  border-radius: 50%;
- border: 1.8px solid #000;
+ border: 1.8px solid var(--border-color);
  position: relative;
 }
 
-body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic{
+body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic {
  position: relative;
 }
 
-body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic i{
+body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic i {
  position: absolute;
  bottom: 4px;
  right: -9px;
 }
-/* body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic>img::after{
- content: '\9660';
- position: absolute;
- bottom: 2px;
- right: 0;
- width: 2px;
- height: 2px;
-} */
-
-
 
 body>header>.menu-button-cover>button>i {
  font-size: 18px
+}
+
+
+main {
+ padding: 18px 25px;
+}
+
+form.login-form {
+ max-width: 500px;
+ min-width: 200px;
+ min-height: 250px;
+ border: 1px solid var(--border-color);
+ border-radius: 8px;
+ position: absolute;
+ z-index: 5;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ flex-direction: column;
+ padding: 10px;
+ top: 50%;
+ left: 50%;
+ /* top: 50%; */
+ transform: translate(-50%, -50%);
+ background: var(--container-bg-color);
+ /* transform: translateY(-50%)
+ transform: translate(-50%,-50%); */
+ 
+}
+form.login-form input{
+ border: 1px solid var(--border-color);
+ height: 30px;
+ border-radius: 5px;
+ padding: 5px;
+}
+
+
+.popup-screen{
+ position: absolute;
+ width: 100vw;
+ height: 100vh;
+ top: 0;
+ left: 0;
+ background: var(--white-color);
+ opacity: 50%;
+ z-index: 3;
+ display: none;
+}
+.popup-box{
+ z-index: 5
 }

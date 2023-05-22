@@ -1,6 +1,8 @@
 :root{
  --container-bg-color: #F8F9FF;
  --border-color: #D0D0D0;
+ --white-color: #FFFFFF;
+ --black-color: #000000;
  --shadow-color: #E7E7E7;
  --header-bottom-shadow: 0 1px 2px 1px var(--shadow-color);
 }

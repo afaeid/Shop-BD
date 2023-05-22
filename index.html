@@ -1,83 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
+ <!DOCTYPE html>
+ <html lang="en">
 
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta http-equiv="X-UA-Compatible" content="ie=edge">
- <title>SHOPBD</title>
- <!-- Importing font awesome icons -->
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
- 
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SHOPBD</title>
+  <!-- Importing font awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="assests/css/main.css">
 
- <link rel="stylesheet" href="assests/css/colors-and-designs.css">
-</head>
+  <link rel="stylesheet" href="assests/css/colors-and-designs.css">
+ </head>
 
-<body>
+ <body>
 
- <header>
-  <div class="logo">
-   <h1>SHOPBD</h1>
-  </div>
-  <nav>
-   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Contact</a></li>
-    <!-- <li><a href="#"></a></li> -->
-   </ul>
-  </nav>
-  <div class="searhbar_profile-pic_login-button_cover">
-   <div class="searchbar">
-    <input type="search" placeholder="Search here..." value="">
+  <header>
+   <div class="logo">
+    <h1>SHOPBD</h1>
+   </div>
+   <nav>
+    <ul>
+     <li><a href="#">Home</a></li>
+     <li><a href="#">About</a></li>
+     <li><a href="#">Contact</a></li>
+     <!-- <li><a href="#"></a></li> -->
+    </ul>
+   </nav>
+   <div class="searhbar_profile-pic_login-button_cover">
+    <div class="searchbar">
+     <input type="search" placeholder="Search here..." value="">
+    </div>
+
+    <div class="profile-pic">
+     <img src="assests/images/profiles/user1.png" alt="" />
+     <i class="fa-solid fa-caret-down"></i>
+    </div>
+
+    <div class="login-button">
+     <button class="button login-btn">Login <i class="fa-solid fa-right-to-bracket"></i></button>
+    </div>
    </div>
 
-   <div class="profile-pic">
-    <img src="assests/images/profiles/user1.png" alt="" />
-    <i class="fa-solid fa-caret-down"></i>
+   <div class="menu-button-cover">
+    <button class="icon-btn">
+     <i class="fa-solid fa-bars"></i>
+    </button>
    </div>
 
-   <div class="login-button">
-    <button class="button login-btn">Login  <i class="fa-solid fa-right-to-bracket"></i></button>
-   </div>
-  </div>
+  </header>
 
-  <div class="menu-button-cover">
-   <button class="icon-btn">
-    <i class="fa-solid fa-bars"></i>
-   </button>
-  </div>
+  <main>
+   <form class="login-form popup-box">
+    <h3>Login</h3>
+    <div class="username-cover">
+     <label for="username"></label>
+     <input type="text" class="username" id="username" placeholder="username" required>
+    </div>
 
- </header>
+    <div class="password-cover">
+     <label for="password"></label>
+     <input type="password" class="password" id="password" placeholder="password" required>
+    </div>
+    <div class="buttons-cover">
+     <button type="reset" class="button">Cancel</button>
+     <button type="submit" class="button">Login</button>
+    </div>
+   </form>
+  </main>
+  <footer>
 
-<main>
- 
-</main>
- <footer>
-
- </footer>
+  </footer>
 
 
 
 
 
+<div class="popup-screen"></div>
+
+  <script>
+   // localStorage.setItem("loginStatus", "logedIn")
+
+   var checkLoginStatus = () => {
+    var menu = document.querySelector("body>header>.menu-button-cover");
+    var profilePic = document.querySelector("body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic");
+    var loginBtn = document.querySelector("body>header>div.searhbar_profile-pic_login-button_cover>.login-button>button")
+    if (localStorage.getItem("loginStatus") == null) {
+     profilePic.style.display = "none";
+     loginBtn.style.display = "flex";
+     menu.style.display = "inline-block"
+    } else {
+     profilePic.style.display = "inline-block";
+     loginBtn.style.display = "none";
+     menu.style.display = "none";
+    }
+   }
+   checkLoginStatus()
+  </script>
+  <script src="assests/js/main.js" type="module"></script>
 
 
-<script>
- var menu = document.querySelector("body>header>.menu-button-cover");
- var profilePic = document.querySelector("body>header>div.searhbar_profile-pic_login-button_cover>.profile-pic");
- 
- //window.addEventListener("load", ()=>{
-  if(localStorage.getItem("loginStatus") == null){
-  // menu.style.display = "none";
-   profilePic.style.display = "none"
-  }
- //})
-</script>
- <script src="assests/js/main.js"></script>
- 
+ </body>
 
-</body>
-
-</html>
+ </html>
